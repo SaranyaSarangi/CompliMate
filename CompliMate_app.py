@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import base64
 from CompliMate import CompliMate  # import backend
+import os
 
 # --- CONFIGURATION ---
 BOT_NAME = "CompliMate"
@@ -150,4 +151,5 @@ if query:
     del st.session_state["user_input"]
 
     st.rerun()
+
 
