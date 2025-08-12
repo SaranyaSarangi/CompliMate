@@ -66,13 +66,27 @@ for item in shared_items:
 
 class CompliMate:
     def __init__(self,
-                 rag_folder=r"C:\saranya\SaranyaCS\Python\JioBp_gpt\RAG_folder",
-                 meta_folder=r"C:\saranya\SaranyaCS\Python\JioBp_gpt\META_folder",
-                 model_path = r"C:\Users\Saranya Sarangi\.cache\huggingface\hub\phi-2.Q4_K_M.gguf"):
-        
-        self.rag_folder = rag_folder
-        self.meta_folder = meta_folder
-        os.makedirs(self.meta_folder, exist_ok=True)
+             rag_folder=None,
+             meta_folder=None,
+             model_path=None):
+
+        repo_root = os.path.dirname(os.path.abspath(__file__))  # location of this file
+
+        if rag_folder is None:
+            rag_folder = os.path.join(repo_root, "RAG_folder") #RAG folder path
+        if meta_folder is None:
+            meta_folder = os.path.join(repo_root, "META_folder") #META folder path 
+         if model_path is None:
+        # download from HF if not in cache
+        model_path = huggingface_hub.hf_hub_download(
+            repo_id="TheBloke/phi-2-GGUF",  # or the repo ID where you got this file
+            filename="phi-2.Q4_K_M.gguf",
+            resume_download=True
+        )
+
+    self.rag_folder = rag_folder
+    self.meta_folder = meta_folder
+    os.makedirs(self.meta_folder, exist_ok=True)
 
         # filenames (consistent)
         self.meta_file = os.path.join(self.meta_folder, "section_meta.json")
@@ -628,4 +642,5 @@ class CompliMate:
         except Exception as e:
             print(f"[ERROR] PDF conversion failed for {pdf_path}: {e}")
             return None
+
         return docx_path
