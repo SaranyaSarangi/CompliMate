@@ -5,9 +5,10 @@ from CompliMate import CompliMate  # import backend
 
 # --- CONFIGURATION ---
 BOT_NAME = "CompliMate"
-BOT_LOGO = r"C:\saranya\SaranyaCS\Python\JioBp_gpt\assets\jiobp_logo.png"
-BACKGROUND_IMAGE = r"C:\saranya\SaranyaCS\Python\JioBp_gpt\assets\green_yellow_only_bg.png"
-OVERLAY_IMAGE = r"C:\saranya\SaranyaCS\Python\JioBp_gpt\assets\jiobp_logo.png"
+ASSETS_DIR = os.path.join(os.path.dirname(__file__), "assets")
+BOT_LOGO = os.path.join(ASSETS_DIR, "jiobp_logo.png")
+BACKGROUND_IMAGE = os.path.join(ASSETS_DIR, "green_yellow_only_bg.png")
+OVERLAY_IMAGE = BOT_LOGO
 
 # --- FUNCTIONS ---
 def get_base64(file_path):
@@ -149,3 +150,4 @@ if query:
     del st.session_state["user_input"]
 
     st.rerun()
+
