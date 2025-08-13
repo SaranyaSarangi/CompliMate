@@ -82,8 +82,6 @@ HF_API_TOKEN = "your_huggingface_token_here"
 ```
 4️⃣ Upload your compliance documents (DOCX or PDF) in your repo's RAG folder.(optional)
 
----
-
 ## 🛠️ Deployment
 You can deploy locally or on your preferred cloud platform (I've mentioned about Streamlit Cloud below):  
 1️⃣ Run the app locally:
@@ -98,8 +96,6 @@ once deployed, open your app’s Settings → Secrets and add:
 HF_API_TOKEN = "your_huggingface_token_here"
 ```
 save and redeploy the app.
-  
----
 
 ## 📦 Usage
 - How users can use the app:
@@ -109,6 +105,31 @@ Users can enter words or phrases for their concerned topic (e.g. "ISO tankers","
 CompliMate will retrieve relevant sections and answer using microsoft/Phi-3-mini-4k-instruct via Hugging Face API.
 
 ---
+
+## 🔍 RAG Pipeline in CompliMate
+CompliMate uses a Retrieval-Augmented Generation (RAG) approach to deliver accurate, document-grounded answers for compliance queries.  
+### Pipeline Flow:
+**Ingest** – PDF/DOCX files parsed, headings & sections extracted.
+
+**Embed** – Text converted to vectors using Sentence-Transformers.
+
+**Index** – Vectors stored in FAISS for fast similarity search.
+
+**Retrieve** – Top-matching sections found for each query.
+
+**Generate** – Hugging Face LLM (microsoft/Phi-3-mini-4k-instruct) produces grounded answers.
+
+💪🏻From regulation to resolution in seconds — fast retrieval + precise LLM reasoning
+
+### Model used:  
+**microsoft/Phi-3-mini-4k-instruct**  
+The LLM crafts a clear, concise answer while staying faithful to the retrieved content.
+
+### ✅Why it matters:
+Search smarter, answer faster — FAISS-powered retrieval + LLM reasoning ensures compliance answers are both relevant and reliable.
+
+---
+
 ## 📌Disclaimer
 CompliMate can currently work on **petroleum regulatory documents only**.
 
