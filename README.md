@@ -4,9 +4,6 @@
 Click to view demo👇🏻:
 [![CompliMate Demo](assets/CompliMate.png)](https://github.com/user-attachments/assets/321868b8-d132-41de-ba7b-e3f990708521)
 
-
-Or checkout the demo👉🏻 **[DEMO📹](https://github.com/user-attachments/assets/321868b8-d132-41de-ba7b-e3f990708521)**
-
 ---
 
 ## 🚀 About the Project
