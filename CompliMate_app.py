@@ -1,8 +1,11 @@
 import streamlit as st
 from PIL import Image
 import base64
-from CompliMate import CompliMate  # import backend
+from CompliMate_API_based import CompliMate  # import backend
 import os
+if not os.environ.get("HF_API_TOKEN"):
+    st.warning("Hugging Face API token not found. Please set `HF_API_TOKEN` in Streamlit secrets.")
+
 
 # --- CONFIGURATION ---
 BOT_NAME = "CompliMate"
@@ -71,7 +74,9 @@ set_background(BACKGROUND_IMAGE)
 
 # Initialize backend once
 if "complimate" not in st.session_state:
-    st.session_state.complimate = CompliMate()
+    st.session_state.complimate = CompliMate(
+        
+    )
 
 # --- OVERLAY IMAGE ---
 st.markdown(
@@ -151,5 +156,6 @@ if query:
     del st.session_state["user_input"]
 
     st.rerun()
+
 
 
