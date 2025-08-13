@@ -88,10 +88,7 @@ class CompliMate:
         # model + placeholders
         self.model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
         dim = self.model.get_sentence_embedding_dimension()
-        # ------------------------
-      
-        # ------------------------
-        
+       
         self.index = None
         self.paragraph_index = None
 
@@ -648,4 +645,5 @@ class CompliMate:
         except Exception as e:
             print(f"[ERROR] PDF conversion failed for {pdf_path}: {e}")
             return None
+
         return docx_path
