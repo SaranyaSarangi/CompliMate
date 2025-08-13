@@ -66,10 +66,16 @@ for item in shared_items:
 
 class CompliMate:
     def __init__(self,
-                 rag_folder=r"C:\saranya\SaranyaCS\Python\JioBp_gpt\RAG_folder",
-                 meta_folder=r"C:\saranya\SaranyaCS\Python\JioBp_gpt\META_folder",
-                 model_path = r"C:\Users\Saranya Sarangi\.cache\huggingface\hub\phi-2.Q4_K_M.gguf"):
-        
+                 rag_folder=None,
+                 meta_folder=None,):
+
+        repo_root = os.path.dirname(os.path.abspath(__file__))  # location of this file
+
+        if rag_folder is None:
+            rag_folder = os.path.join(repo_root, "RAG_folder")
+        if meta_folder is None:
+            meta_folder = os.path.join(repo_root, "META_folder")
+
         self.rag_folder = rag_folder
         self.meta_folder = meta_folder
         os.makedirs(self.meta_folder, exist_ok=True)
@@ -259,9 +265,6 @@ class CompliMate:
             except Exception as e2:
                 print(f"[WARN] Could not persist repaired paragraph index: {e2}")
             
-            
-
-
     def _build_index(self):
         # reset
         self.meta = []
@@ -645,5 +648,6 @@ class CompliMate:
         except Exception as e:
             print(f"[ERROR] PDF conversion failed for {pdf_path}: {e}")
             return None
+
 
         return docx_path
