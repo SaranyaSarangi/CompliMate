@@ -74,9 +74,7 @@ set_background(BACKGROUND_IMAGE)
 
 # Initialize backend once
 if "complimate" not in st.session_state:
-    st.session_state.complimate = CompliMate(
-        
-    )
+    st.session_state.complimate = CompliMate()
 
 # --- OVERLAY IMAGE ---
 st.markdown(
@@ -156,6 +154,7 @@ if query:
     del st.session_state["user_input"]
 
     st.rerun()
+
 
 
 
