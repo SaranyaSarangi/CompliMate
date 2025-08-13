@@ -119,8 +119,8 @@ Contributions are welcome! Please fork the repo, create a new branch for your fe
 This project is licensed under the Apache 2.0 License - see the LICENSE file for details.
 
 ## 📞 Contact
-- Email – sharanya.sarangi@gmail.com
-- LinkedIn - linkedin.com/in/saranya-sarangi-5b3745374
+- Email : sharanya.sarangi@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/saranya-sarangi-5b3745374/)
 
 ## 🎉 Acknowledgments
 I would like to sincerely thank **Reliance BP Mobility Limited (d/b/a Jio-bp)** for providing me the valuable opportunity to work on this project as part of their internship program. Their support and guidance were instrumental in bringing this project to life.
