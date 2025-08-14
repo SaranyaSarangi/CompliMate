@@ -99,7 +99,7 @@ save and redeploy the app.
 
 ## 📦 Usage
 - How users can use the app:
-Users can enter words or phrases for their concerned topic (e.g. "ISO tankers","Safety fittings",etc.) and click 'Submit'.
+Users can enter words or phrases for their concerned topic (e.g."Exemptions for motor conveyance and stationary engines","Testing viscous petroleum"etc.) and click 'Submit'.
 
 - What output or feedback to expect:
 CompliMate will retrieve relevant sections and answer using microsoft/Phi-3-mini-4k-instruct via Hugging Face API.
