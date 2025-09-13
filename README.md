@@ -9,7 +9,7 @@ Click to view demo👇🏻:
 ## 🚀 About the Project
 
 - Your smart companion for quick lookups, clear insights and summarization from dense regulatory files.
-- **CompliMate** was created as part of an internship program under **Reliance BP Mobility Limited (d/b/a Jio-bp)**.
+- **CompliMate** was created as part of an internship program under **Reliance BP Mobility Limited (Jio-bp)**.
 - This project processes DOCX and PDF regulatory documents using python-docx and pdf2docx, converts their content into searchable embeddings with sentence-transformers,uses FAISS for fast similarity search to quickly find relevant sections and uses Microsoft's **Phi-3-mini-4k-instruct** (hugging face model) to generate AI answers. Efficient management of document metadata and caching to ensure smooth performance.
 
 ## ✨ Features
@@ -144,4 +144,4 @@ This project is licensed under the Apache 2.0 License - see the LICENSE file for
 - [LinkedIn](https://www.linkedin.com/in/saranya-sarangi-5b3745374/)
 
 ## 🎉 Acknowledgments
-I would like to sincerely thank **Reliance BP Mobility Limited (d/b/a Jio-bp)** for providing me the valuable opportunity to work on this project as part of their internship program. Their support and guidance were instrumental in bringing this project to life.
+I would like to sincerely thank **Reliance BP Mobility Limited (Jio-bp)** for providing me the valuable opportunity to work on this project as part of their internship program. Their support and guidance were instrumental in bringing this project to life.
